@@ -1,0 +1,38 @@
+<?php 
+require 'comment.php';
+?>
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<link rel="stylesheet" href="style.css"  type="text/css"> 
+<form action="scripts/comment.php" method="post" name="forma">
+</head> 
+<div class="container comment">
+	<div id="comment">
+<form name = "commentform" id="commentform" action = "first.html" method = "post">
+	      <p>
+	        <input type="hidden" name="post_id" value="150" />
+	      </p>
+		  <p>
+		    <label>Имя:</label>
+		    <input type="user_id" name="name" />
+		  </p>
+		  <p>
+		<label for="comment">Комментарий<br/>
+			<textarea name = "text" cols = "40" rows = "3"></textarea></p>
+		<p><input type = "submit" name="text" id="comment" class="button" value = "Оставить комментарий"></label>
+	</p>
+	<input type = "reset" value = "Очистить"></p>
+</form>
+<style>
+textarea{
+	background: #efefef;
+	margin: 0 100px 5px 0;
+}
+</style>
+		</div>
+		</div>
+</html>
+	
+	
