@@ -76,7 +76,7 @@
             <a href="/mo/index.php">Главная страница</a>
         </div>
 		<div id="link_category1">
-            <a href="/mo/form_category.php">Юбки</a>
+            <a href="/mo/form_category.php?category=1">Юбки</a>
         </div>
 
         
@@ -97,7 +97,10 @@
     <?php
         }else{
             //Если пользователь авторизован, то выводим ссылку Выход
-    ?>  
+    ?>
+            <div id="link_add_product">
+                <a href="/mo/form_add_product.php">добавить товар</a>
+            </div>
             <div id="link_logout">
                 <a href="/mo/logout.php">Выход</a>
             </div>
