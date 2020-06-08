@@ -76,7 +76,7 @@
             <a href="/mo/index.php">Главная страница</a>
         </div>
 		<div id="link_category1">
-            <a href="/mo/form_category.php">Юбки</a>
+            <a href="/mo/form_category.php?category=1">Юбки</a>
         </div>
 
         

@@ -1,5 +1,6 @@
 <?php 
     //Подключение шапки
+    require_once "connect.php";
     require_once("header.php");
 ?>
 
@@ -11,37 +12,32 @@
 </head> 
 <body> 
 <ul class="products clearfix">
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="1.jpg"  alt="">
-	</div>
-	<div class="holder">
-	<div class="block">
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="2.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="3.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="4.jpg"  alt="">
-	</div>
-</a>
-</li>
-
+    <?php
+    $category = $_GET["category"];
+    if(is_null($category))
+        die("Не задана категория");
+    $query ="SELECT * FROM tovar WHERE category='".$category."'";
+    $result = mysqli_query($mysqli, $query) or die("Ошибка " . mysqli_error($mysqli));
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+    foreach ($data as $item){
+        ?>
+        <li class="product-wrapper">
+            <a href="index2.php?id=<?=$item["id"]?>" class="product">
+                <div class="product-photo">
+                    <img src="<?=$item["photo"]?>"  alt="">
+                </div>
+                <div class="holder">
+                    <div class="block" style="text-align: center; color: black">
+                        <div>Название: <?=$item["name"]?></div>
+                        <div>Количество: <?=$item["count"]?></div>
+                        <div>Категория: <?=$item["category"]?></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <?php
+    }
+    ?>
 </ul>
 <style>
 	.product-wrapper {
