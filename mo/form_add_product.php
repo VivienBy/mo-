@@ -1,15 +1,6 @@
 <?php
 require_once("header.php");
 
-const CATEGORIES = [
-    1 => "Юбки",
-    2 => "Пиджаки",
-    3 => "Брюки",
-    4 => "Аксессуары",
-    5 => "Кофты",
-    6 => "Верхняя одежда"
-];
-
 function drawMessages() {
     if(isset($_SESSION["error_messages"]) && !empty($_SESSION["error_messages"])) {
         echo $_SESSION["error_messages"];
