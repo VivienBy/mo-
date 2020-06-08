@@ -83,9 +83,16 @@
     float: left;
 }
 
+#link_add_product{
+    float: left;
+    background: #4e4eec;
+    border-radius: 10px;
+}
+
 #link_auth, #link_logout{
     float: right;
 }
+
 
 #link_register a{
     background: #54d854;

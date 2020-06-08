@@ -97,7 +97,10 @@
     <?php
         }else{
             //Если пользователь авторизован, то выводим ссылку Выход
-    ?>  
+    ?>
+            <div id="link_add_product">
+                <a href="/mo/form_add_product.php">добавить товар</a>
+            </div>
             <div id="link_logout">
                 <a href="/mo/logout.php">Выход</a>
             </div>
