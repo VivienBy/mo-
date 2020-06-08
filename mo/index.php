@@ -1,5 +1,8 @@
-<?php 
-    //Подключение шапки
+<?php
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+    require "connect.php";
     require_once("header.php");
 ?>
 
@@ -11,63 +14,21 @@
 </head> 
 <body> 
 <ul class="products clearfix">
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="1.jpg"  alt="">
-	</div>
-	<div class="holder">
-	<div class="block">
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="2.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="3.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="4.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="5.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="6.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product">
-	<div class="product-photo">
-		<img src="7.jpg"  alt="">
-	</div>
-</a>
-</li>
-<li class="product-wrapper">
-<a href="index2.php" class="product"><div class="product-photo">
-		<img src="8.jpg"  alt="">
-	</div>
-</a>
-</li>
+    <?php
+    $query ="SELECT * FROM tovar";
+    $result = mysqli_query($mysqli, $query) or die("Ошибка " . mysqli_error($mysqli));
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+    foreach ($data as $item){?>
+        <li class="product-wrapper">
+            <a href="index2.php" class="product">
+                <div class="product-photo">
+                    <img src="1.jpg"  alt="">
+                </div>
+                <div class="holder">
+                    <div class="block">
+            </a>
+        </li>
+    <?php}?>
 </ul>
 <style>
 	.product-wrapper {
