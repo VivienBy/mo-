@@ -18,17 +18,20 @@
     $query ="SELECT * FROM tovar";
     $result = mysqli_query($mysqli, $query) or die("Ошибка " . mysqli_error($mysqli));
     $data = $result->fetch_all(MYSQLI_ASSOC);
-    foreach ($data as $item){?>
+    foreach ($data as $item){
+        ?>
         <li class="product-wrapper">
             <a href="index2.php" class="product">
                 <div class="product-photo">
-                    <img src="1.jpg"  alt="">
+                    <img src="<?=$item["photo"]?>"  alt="">
                 </div>
                 <div class="holder">
                     <div class="block">
             </a>
         </li>
-    <?php}?>
+    <?php
+    }
+    ?>
 </ul>
 <style>
 	.product-wrapper {
