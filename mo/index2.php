@@ -1,7 +1,13 @@
 <?php
 require "connect.php";
 require_once("header.php");
-?>	
+$id = $_GET["id"] ?? null;
+if(is_null($id))
+    die("Не передан идентификатор товара");
+$query ="SELECT * FROM tovar WHERE id=" . $id;
+$result = mysqli_query($mysqli, $query) or die("Ошибка " . mysqli_error($mysqli));
+$data = $result->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +17,7 @@ require_once("header.php");
 
 </head>
 <body>
-				<img src="1.jpg"  alt="">
+				<img src="<?=$data["photo"]?>"  alt="">
 			<a name="com"></a>	
 		<p>Оставить комментарий</p>
 		<div id="commentBlock">

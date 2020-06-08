@@ -1,7 +1,4 @@
 <?php
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
     require "connect.php";
     require_once("header.php");
 ?>
@@ -21,12 +18,17 @@
     foreach ($data as $item){
         ?>
         <li class="product-wrapper">
-            <a href="index2.php" class="product">
+            <a href="index2.php?id=<?=$item["id"]?>" class="product">
                 <div class="product-photo">
                     <img src="<?=$item["photo"]?>"  alt="">
                 </div>
                 <div class="holder">
-                    <div class="block">
+                    <div class="block" style="text-align: center; color: black">
+                        <div>Название: <?=$item["name"]?></div>
+                        <div>Количество: <?=$item["count"]?></div>
+                        <div>Категория: <?=$item["category"]?></div>
+                    </div>
+                </div>
             </a>
         </li>
     <?php
