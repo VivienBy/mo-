@@ -1,43 +1,45 @@
-.clear{
+.clear {
     clear: both;
 }
 
-.mesage_error{
+.mesage_error {
     color: #cc0000;
 }
 
-.success_message{
+.success_message {
     color: green;
 }
 
-.block_for_messages{
+.block_for_messages {
     text-align: center;
 }
 
-#header, #footer{
+#header, #footer {
     border: 2px solid #000;
 }
 
-#header{
+#header {
     padding-left: 10px;
 }
 
-#footer{
+#footer {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
 }
 
-#header h2, #footer h2{
+#header h2, #footer h2 {
     text-align: center;
     margin: 0;
 }
-#category_block{
+
+#category_block {
     width: 290px;
     float: left;
 }
-#category_block a{
+
+#category_block a {
     display: block;
     padding: 10px;
     border-radius: 10px;
@@ -46,26 +48,30 @@
     height: 30px;
     text-decoration: none;
 }
-#category_block a:hover{
+
+#category_block a:hover {
     text-decoration: underline;
 }
-#link_category1{
+
+#link_category1 {
     float: left;
 }
 
-#link_category2{
+#link_category2 {
     float: right;
 }
-#link_category1 a, #link_category2 a{
+
+#link_category1 a, #link_category2 a {
     background: #4c4c4e;
     text-align: center;
 }
-#auth_block{
+
+#auth_block {
     width: 290px;
     float: right;
 }
 
-#auth_block a{
+#auth_block a {
     display: block;
     padding: 10px;
     border-radius: 10px;
@@ -75,11 +81,11 @@
     text-decoration: none;
 }
 
-#auth_block a:hover{
+#auth_block a:hover {
     text-decoration: underline;
 }
 
-#link_register{
+#link_register {
     float: left;
 }
 
@@ -89,30 +95,31 @@
     border-radius: 10px;
 }
 
-#link_auth, #link_logout{
+#link_auth, #link_logout {
     float: right;
 }
 
 
-#link_register a{
+#link_register a {
     background: #54d854;
 }
 
-#link_auth a, #link_logout a{
+#link_auth a, #link_logout a {
     background: #4e4eec;
     text-align: center;
 }
 
 /* Блок с формой регистрации */
-#form_register, #form_auth{
+#form_register, #form_auth {
     width: 300px;
     margin: 0 auto;
 }
 
 
-#authorized h2{
+#authorized h2 {
     text-align: center;
 }
+
 body {
     background: #efefef;
     font-family: 'Open Sans', sans-serif;
@@ -136,6 +143,25 @@ span {
 .mregister {
     margin: 80px auto 0;
 }
+
+.pretty_form {
+    margin: 80px auto;
+}
+
+.pretty_form button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #54d854;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.pretty_form button:hover {
+    cursor: pointer;
+    border-color: green;
+}
+
 
 .error {
     margin: 40px auto 0;
@@ -162,9 +188,9 @@ span {
     width: 350px;
     height: auto;
     background: #fff;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13);
-    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
 }
 
 #welcome {
@@ -172,9 +198,9 @@ span {
     padding: 30px;
     background: #fff;
     margin: 160px auto 0;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13);
-    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
 }
 
 .container h1 {
@@ -196,7 +222,7 @@ span {
     padding-bottom: 15px;
 }
 
-.container form .input,.container input[type=text],.container input[type=password],.container input[type=e] {
+.container form .input, .container input[type=text], .container input[type=password], .container input[type=e], select, input[type=number] {
     background: #fbfbfb;
     font-size: 24px;
     line-height: 1;
@@ -209,36 +235,36 @@ span {
 
 .container form .input:focus {
     border: 1px solid #f58220;
-    -webkit-box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
-    -moz-box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
-    box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
+    -webkit-box-shadow: 0 0 3px 0 rgba(245, 130, 32, 0.75);
+    -moz-box-shadow: 0 0 3px 0 rgba(245, 130, 32, 0.75);
+    box-shadow: 0 0 3px 0 rgba(245, 130, 32, 0.75);
 }
 
 
 /*= BUTTONS
 --------------------------------------------------------*/
 
-.button{
-border: solid 1px #da7c0c;
-	background: #f78d1d;
-	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
-	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
-	color: #fff;
-padding: 7px 12px;
--webkit-border-radius:4px;
-   -moz-border-radius:4px;
-        border-radius:4px;
-float: right;
-cursor: pointer;
+.button {
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+    background: -moz-linear-gradient(top, #faa51a, #f47a20);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+    color: #fff;
+    padding: 7px 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
 }
 
 
-.button:hover{
-background: #f47c20;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
-	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+.button:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top, #f88e11, #f06015);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
 }
 
 
