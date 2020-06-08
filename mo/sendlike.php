@@ -22,7 +22,7 @@
 					}
 				}
 			            	
-		header("Location: index2.php");
+		header("Location: index2.php?id=" . $_GET["id"]);
 		/*print_r($like);	*/
 	
  ?>

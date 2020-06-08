@@ -7,5 +7,5 @@
 
 	$sql = "INSERT INTO comment (date,message,likes) VALUES ( '".$date."', '".$message."', 0)";
 	$query = $mysqli ->query($sql);
-	header("Location: index2.php");
+	header("Location: index2.php?id=" . $_GET["id"]);
 ?>

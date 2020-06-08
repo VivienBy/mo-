@@ -21,7 +21,7 @@ $data = $result->fetch_assoc();
 			<a name="com"></a>	
 		<p>Оставить комментарий</p>
 		<div id="commentBlock">
-			<form action = "addcomment.php" method = "post">
+			<form action = "addcomment.php?id=<?=$_GET["id"]?>" method = "post">
 			<div id="createComment">	
 				<textarea type="text" placeholder="Введите комментарий" name="message" id="textCreateComment"></textarea> 
 				<button type="submit" id="sendComment" >Отправить</button>
@@ -44,7 +44,7 @@ $data = $result->fetch_assoc();
 					    	
 					        $row = mysqli_fetch_row($result);
 					        echo "<tr>";
-					            for ($j = 1 ; $j < 4 ; ++$j) {if ($j == 3) echo "$row[$j]</td>"; else if ($j == 2) echo "<td align='left'>$row[$j]    <hr/><form action ='sendlike.php' method='post'><input class='like' name='likes$i' type='submit' value = '❤'/></form>"; else echo "<td>$row[$j]</td>"; ; /* if (!isset($_POST['likes$i'])) die('Не передано имя');*/
+					            for ($j = 1 ; $j < 4 ; ++$j) {if ($j == 3) echo "$row[$j]</td>"; else if ($j == 2) echo "<td align='left'>$row[$j]    <hr/><form action ='sendlike.php?id=".$_GET["id"]."' method='post'><input class='like' name='likes$i' type='submit' value = '❤'/></form>"; else echo "<td>$row[$j]</td>"; ; /* if (!isset($_POST['likes$i'])) die('Не передано имя');*/
 
 					            	
 
